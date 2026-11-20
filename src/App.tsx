@@ -159,7 +159,9 @@ export default function App() {
       } catch {}
     }
     // Ampliación: la primera vez se muestra el video de introducción.
-    if (hayIntro() && !useProgreso.getState().introVista) {
+    // Corrección: la introducción se muestra cada vez que empieza una aventura
+    // (antes solo la primera vez). Se puede saltar con el botón o con Esc.
+    if (hayIntro()) {
       setShowIntro(true);
       return;
     }
