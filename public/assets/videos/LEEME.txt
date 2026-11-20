@@ -1,0 +1,16 @@
+VIDEOS DEL JUEGO
+================
+intro.mp4            Video de introducción (ya incluido).
+dimN_ampliada.vtt    Subtítulos de la cinemática de cada misión (ya incluidos).
+capsula_*.vtt        Subtítulos de los videos complementarios (ya incluidos).
+
+Para sustituir una cinemática narrada por un video real, copia aquí el archivo
+con ESTE nombre exacto y vuelve a iniciar el juego:
+
+  dim1_ampliada.mp4  dim2_ampliada.mp4  dim3_ampliada.mp4
+  dim4_ampliada.mp4  dim5_ampliada.mp4
+  capsula_kafka.mp4  capsula_praga.mp4  capsula_simbolos.mp4
+  capsula_padre.mp4  capsula_kafkiano.mp4
+
+Formato recomendado: MP4 (H.264 + AAC), 1280x720, 30 fps, 1,5 a 2,5 Mbps.
+Si el montaje no sigue los tiempos del guion, ajusta las horas del .vtt.
