@@ -1,0 +1,11 @@
+Voy a subir un proyecto completo que ya funciona: "Metamorfosis: El Despertar del Cazador", un videojuego educativo en React 19 + TypeScript + Vite + Three.js (React Three Fiber) + Tailwind 4 + Zustand.
+
+Antes de que lo suba:
+1. Borra los archivos de ejemplo que creaste, para que no queden duplicados. Conserva solo metadata.json.
+
+Después de que lo suba:
+2. NO generes una app nueva ni reescribas el código. Usa exactamente los archivos subidos.
+3. Instala las dependencias de package.json y ejecuta la vista previa.
+4. Si aparece un error, corrige solo la línea que falla y dime qué cambiaste.
+5. No modifiques src/data/cinematicas.ts, src/data/recursos.ts ni src/data/dimensions.ts.
+6. El juego no usa la API de Gemini: no agregues llamadas a Gemini ni pidas una clave.

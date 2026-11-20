@@ -1,0 +1,7 @@
+{
+  "name": "Metamorfosis: El Despertar del Cazador",
+  "description": "Videojuego educativo RPG 2D cinematográfico basado en La metamorfosis de Franz Kafka y el universo de cazadores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
