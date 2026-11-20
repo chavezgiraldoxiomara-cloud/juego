@@ -1,9 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { SkipForward } from 'lucide-react';
-import { rutaVideo } from '../utils/videos';
 
-/** ¿Existe el video de introducción en public/assets/videos/? */
-export const hayIntro = () => !!rutaVideo('intro.mp4');
+/** Ruta fija del video de introducción (incluido en el proyecto). */
+const RUTA_INTRO = '/assets/videos/intro.mp4';
+
+/**
+ * El video de introducción viene incluido en el proyecto, así que siempre se intenta mostrar.
+ * Corrección: antes dependía de la lista de videos que arma vite.config.ts al compilar;
+ * en Google AI Studio esa lista podía llegar vacía y la intro desaparecía.
+ * Si el archivo no carga, onError salta directo al mapa.
+ */
+export const hayIntro = () => true;
 
 /**
  * Ampliación: video de introducción («Una mañana, todo cambió…»).
@@ -30,7 +37,7 @@ export const IntroVideo: React.FC<{ onFin: () => void }> = ({ onFin }) => {
     <div data-ui className="fixed inset-0 z-[80] bg-black flex items-center justify-center animate-fadeIn">
       <video
         ref={ref}
-        src={rutaVideo('intro.mp4') ?? undefined}
+        src={RUTA_INTRO}
         poster="/assets/videos/intro_poster.jpg"
         playsInline
         controls
