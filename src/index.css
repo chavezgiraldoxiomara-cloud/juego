@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    user-select: none;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+}
+
+/* Custom Hunter glowing effects */
+.glow-cyan {
+  text-shadow: 0 0 12px rgba(6, 182, 212, 0.75), 0 0 24px rgba(6, 182, 212, 0.4);
+}
+
+.glow-purple {
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.75), 0 0 24px rgba(168, 85, 247, 0.4);
+}
+
+.glow-gold {
+  text-shadow: 0 0 12px rgba(234, 179, 8, 0.8), 0 0 25px rgba(234, 179, 8, 0.4);
+}
+
+.box-glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.35), inset 0 0 20px rgba(6, 182, 212, 0.15);
+}
+
+.box-glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.35), inset 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.box-glow-gold {
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.4), inset 0 0 20px rgba(234, 179, 8, 0.2);
+}
+
+/* Hologram scanline effect */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Hunter runes rotation */
+@keyframes spinClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulseScale {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-spin-slow {
+  animation: spinClockwise 28s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinCounterClockwise 34s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseScale 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatGentle 3.5s ease-in-out infinite;
+}
+
+/* Sleek dark scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+/* Aparición suave de paneles y modales */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease-out both;
+}
+
+/* Destello al cruzar un portal en el mapa 3D */
+@keyframes warpFlash {
+  0% { opacity: 0; }
+  70% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.animate-warp {
+  animation: warpFlash 0.85s ease-in both;
+}
+
+/* Accesibilidad: sin animaciones para quien pide movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-spin-reverse,
+  .animate-pulse-slow,
+  .animate-float,
+  .animate-fadeIn,
+  .animate-warp,
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
+  }
+}
+
+/* Aparición del emblema legendario */
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scaleUp,
+  .animate-bounce {
+    animation: none !important;
+  }
+}
+
+/* ── Ampliación: cinemática narrada ── */
+/* Acercamiento lento de la imagen de cada escena (efecto de cámara) */
+@keyframes cineZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.14); }
+}
+
+.cine-zoom {
+  animation-name: cineZoom;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+/* Los textos de lectura sí se pueden seleccionar y copiar */
+.texto-seleccionable {
+  user-select: text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cine-zoom {
+    animation: none !important;
+  }
+}
