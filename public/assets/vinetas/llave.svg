@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1026"/><stop offset="1" stop-color="#1b1140"/></linearGradient>
+<radialGradient id="luz" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffd58a" stop-opacity="0.95"/><stop offset="1" stop-color="#ffd58a" stop-opacity="0"/></radialGradient>
+<radialGradient id="frio" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#7dd3fc" stop-opacity="0.8"/><stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<rect x="0" y="0" width="1280" height="720" fill="#101630"/><rect x="380" y="0" width="520" height="720" fill="#161d3d" stroke="#05070f" stroke-width="12"/><circle cx="640" cy="330" r="230" fill="url(#luz)" opacity="0.45"/><rect x="560" y="170" width="160" height="330" rx="20" fill="#c79a45" stroke="#05070f" stroke-width="10"/><circle cx="640" cy="300" r="34" fill="#05070f"/><path d="M622,312 L658,312 L668,410 L612,410 Z" fill="#05070f"/><g fill="#f3d48a" stroke="#05070f" stroke-width="6"><rect x="640" y="288" width="210" height="22" rx="8"/><circle cx="900" cy="299" r="56"/><circle cx="900" cy="299" r="24" fill="#101630"/><rect x="668" y="306" width="18" height="34"/><rect x="700" y="306" width="18" height="24"/></g><path d="M690,420 q-8,40 0,70 q8,-30 0,-70" fill="#5b3a1e"/><text x="640.0" y="660" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#cbd5f5" opacity="0.85" letter-spacing="3">SIN MANOS: LA LLAVE GIRA CON LA BOCA</text>
+</svg>
